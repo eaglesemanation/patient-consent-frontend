@@ -13,7 +13,7 @@ function getLibrary(provider?: any, connector?: any) {
 ReactDOM.render(
     <React.StrictMode>
         <Web3ReactProvider getLibrary={getLibrary}>
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <BrowserRouter>
                 <App />
             </BrowserRouter>
         </Web3ReactProvider>

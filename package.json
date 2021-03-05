@@ -1,6 +1,5 @@
 {
   "name": "patient-consent-frontend",
-  "homepage": "https://eaglesemanation.github.io/patient-consent-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
