@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useWeb3React } from "@web3-react/core";
-import { Card, Table, Spinner, Container, Col, Row } from "react-bootstrap";
+import { Card, Table, Spinner, Container, Col } from "react-bootstrap";
 
 function DoctorView(props)
 {
