@@ -95,7 +95,7 @@ function ClientView(props) {
                                                             </div>
                                                             <div className="col-sm-6">
                                                                 <p className="m-b-10 f-w-600">Birthdate</p>
-                                                                <h6 className="text-muted f-w-400">{patient.birthdate}</h6>
+                                                                <h6 className="text-muted f-w-400">{new Date(patient.birthdate).toLocaleDateString()}</h6>
                                                             </div>
                                                         </div>
                                                         <h6 className="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Diagnose</h6>
@@ -106,9 +106,12 @@ function ClientView(props) {
                                                             </div>
                                                             <div className="col-sm-6">
                                                                 <p className="m-b-10 f-w-600">Addiction</p>
-                                                                <h6 className="text-muted f-w-400">{patient.permission ?
-                                                                    patient.addiction : 
-                                                                    <i style={{color: "red"}}>This field is hidden</i>
+                                                                <h6 className="text-muted f-w-400">
+                                                                    {!patient.permission ? (
+                                                                        <i style={{color: "red"}}>This field is hidden</i> 
+                                                                    ) : patient.addiction === "" ? 
+                                                                        "No addiction"
+                                                                    : patient.addiction 
                                                                 }</h6>
                                                             </div>
                                                         </div>
