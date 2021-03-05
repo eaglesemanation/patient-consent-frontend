@@ -8,7 +8,7 @@ function DoctorView(props)
     const [data, setData] = useState(null);
 
     useEffect(()=> {
-        fetch(`http://emnt-desktop:9090/doctor?` + new URLSearchParams({
+        fetch(`${process.env.REACT_APP_API_URL}/doctor?` + new URLSearchParams({
             requester: web3React.account
         }))
             .then(response => response.json())

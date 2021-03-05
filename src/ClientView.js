@@ -11,7 +11,7 @@ function ClientView(props) {
 
     function loadPatient() {
         if(web3React.account) {
-            fetch(`https://patient-consent-backend.herokuapp.com/client?` + new URLSearchParams({
+            fetch(`${process.env.REACT_APP_API_URL}/client?` + new URLSearchParams({
                 requester: web3React.account, 
                 client: web3React.account
             }))
