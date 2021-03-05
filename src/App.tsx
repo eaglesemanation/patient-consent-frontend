@@ -63,7 +63,7 @@ function App() {
                 setContract(new Contract(address, abi).connect(signer) as PatientConsent);
             }
         }
-    }, [web3React.active]);
+    }, [web3React.active, web3React.library]);
 
 
     return (

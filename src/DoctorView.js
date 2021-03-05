@@ -5,7 +5,6 @@ import { Card, Table, Spinner } from "react-bootstrap";
 function DoctorView(props)
 {
     const web3React = useWeb3React();
-    const {contract} = props;
     const [data, setData] = useState(null);
 
     useEffect(()=> {
